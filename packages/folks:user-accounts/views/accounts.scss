@@ -1,0 +1,23 @@
+@import ".meteor/local/build/programs/server/assets/packages/reywood_bootstrap3-sass/bootstrap";
+@import "client/stylesheets/_variables";
+
+.accounts-view{
+  .at-form{
+    margin: 0;
+    padding-top: 30px;
+    width: 300px;
+    @include center-block();
+    text-align : center;
+
+    .at-title{
+      .logo{
+        margin-bottom: 30px;
+      }
+      margin-bottom: 20px;
+    }
+
+    fieldset{
+      margin-bottom: 10px;
+    }
+  }
+}

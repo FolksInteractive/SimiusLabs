@@ -1,0 +1,152 @@
+.topbar{
+  border: 0;
+  border-radius: 0;
+  background: $topbar-bg;
+  padding: 8px;
+  @include transition(all .1s linear);
+
+  .navbar-header{
+    .compress-toggler{
+      padding: 4px 12px;
+      margin-right: 10px;
+      font-size: 14px;
+      float: left;
+    }    
+  }
+
+  &.navbar{
+    margin-bottom : 0;
+  }
+
+  .nav{
+    &.navbar-nav {
+      margin: 0;
+    }
+    
+    & > li{
+      display: inline-block;
+      
+      &:last-child{
+        margin-right: 15px;
+      }
+
+      & > a{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: #999c9e;
+        font-size: 14px;
+        min-height: 50px;
+
+        &:hover,
+        &:focus{
+          background-color: #ececec;
+        }
+
+        .label {
+          line-height: 12px;
+          padding: 2px 5px;
+          position: absolute;
+          right: 6px;
+          top: 6px;
+        }
+      }
+    }
+
+    .dropdown-menu{
+      width: 310px;
+      min-width: 0;
+
+      &.dropdown-messages {
+        padding: 10px;
+        margin-left: 5px;
+      }
+
+      &.dropdown-tasks {
+        margin-left: -59px;
+      }
+
+      &.dropdown-alerts {
+        padding: 10px;
+        margin-left: -123px;
+
+        li{
+
+          a {
+            font-size: 12px;
+          }
+
+          em {
+            font-size: 10px;
+          }
+        }
+      }
+
+      &.dropdown-user {
+        right: 0;
+        left: auto;
+      }
+
+      li{
+        display: block;
+
+        &:last-child{
+          font-size: 12px;
+          padding: 10px;
+        }
+
+        a{
+          padding: 3px 20px;
+          min-height: 0;
+
+          div{
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+.compressed .topbar{  
+  .nav{
+    & > li{
+      a{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-header {
+    display: inline;
+    float: left;
+  }
+  // Overwriting bootstrap
+  .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    float: left;
+    width: 310px;
+    margin-top: inherit;
+    background-color: $dropdown-bg;
+    border: $navbar-default-border;
+    border: 1px solid $dropdown-fallback-border; // IE8 fallback
+    border: 1px solid $dropdown-border;
+    @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+  }
+
+}
+
+@media (min-width: 768px) {
+  .topbar .nav .dropdown-messages,
+  .topbar .nav .dropdown-tasks,
+  .topbar .nav .dropdown-alerts {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .topbar .nav li.dropdown {
+    display: none;
+  }
+}

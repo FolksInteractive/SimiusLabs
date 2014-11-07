@@ -1,0 +1,224 @@
+.sidebar{
+  background-color: transparent;
+  border-color: $nav-bg;
+  @include transition(all .25s linear);
+
+  header{
+    text-align: center;
+    padding: 20px 0;
+    background: darken($brand-primary, 3%);
+    
+    .logo-full{
+      @include animation(fadeIn 500ms linear);
+    }
+    .logo-compressed{
+      display : none;
+    }
+  }
+
+  .nav{
+
+    & > li {
+      border-left: 4px solid transparent;
+
+      &:last-child{
+        margin-bottom:10px;
+      }
+
+      & > a{
+        color: $nav-text-color;
+        font-weight: 600;
+        padding: 14px 20px 14px 25px;
+
+        .fa.arrow{
+          float: right;
+          padding-top: 3px;
+
+          &::before {
+            content: "\f104";
+          }
+        }
+        .nav-label,
+        .arrow{
+          @include animation(fadeIn 500ms linear);
+        }
+
+        i {
+          width:13px;
+          margin-right: 6px;
+        }
+
+        &:hover,
+        &:focus{
+          background-color: rgba(0,0,0, 0.3);
+          color: white;
+        }
+      }
+
+      &.disabled{
+        opacity: .5;
+      }
+
+      &.active {
+        border-left-color: darken($navy, 2%);
+        background: darken($nav-bg, 3%);
+
+        a{
+          color: white;
+
+          .fa.arrow:before {
+            content: "\f107";
+          }
+        }
+      }
+      &.special_link {
+        a {
+          background: #1ab394;
+          color: white;
+          &:hover {
+            background: #17987e !important;
+            color: white;
+          }
+
+          span.label {
+            background: white;
+            color: #1ab394;
+          }
+        }
+      }
+    }
+
+    &.nav-second-level {
+      & > li {
+        border-left: 0px solid transparent;
+
+        & > a{
+          padding: 7px 10px 7px 52px;
+        }
+
+        &.active{
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.compressed .sidebar{
+  border-left: 0px solid transparent;
+  width: $sidebar-compress-width;
+  @include animation(fadeInLeft .25s linear);
+
+  header {
+    .logo-full{
+      display:none;
+    }  
+    .logo-compressed{
+      display : inline;
+    }
+  }
+
+  .nav{
+    & > li {
+      & > a{
+        font-size: 16px;
+
+        .nav-label,
+        .arrow{
+          display:none;
+        }
+      }
+
+      .nav-second-level {
+        position: absolute;
+        left: $sidebar-compress-width - 4px;
+        top: 0px;
+        background-color: $nav-bg;
+        font-size: 12px;
+
+        li{
+          margin: 5px 10px;
+
+          &:first-child{
+            margin-top:10px;
+          }
+
+          a{
+            white-space: nowrap;
+            font-size: 12px;
+            border-radius: 3px;
+            padding: 10px 10px 10px 15px;
+          }
+        }
+      }
+    }     
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    z-index: 101;
+    position: absolute;
+    width: $sidebar-width;
+  }
+}
+
+@media (max-width: 768px) {
+  .compressed .sidebar{
+    display: block;
+  }
+  .sidebar {
+    display: none;
+    z-index: 101;
+    position: absolute;
+    width: $sidebar-compress-width;
+
+    header {      
+      .logo-full{
+        display : none;
+      } 
+      .logo-compressed{
+        display : inline;
+      }
+    }
+
+    .nav{
+      & > li {
+        & > a{
+          font-size: 16px;
+
+          .nav-label,
+          .arrow{
+            display:none;
+          }
+        }
+      }
+
+      &.nav-second-level {
+        position: absolute;
+        left: $sidebar-compress-width - 4px;
+        top: 0px;
+        background-color: $nav-bg;
+        font-size: 12px;
+
+        li{
+          margin: 5px 10px;
+
+          &:first-child{
+            margin-top:10px;
+          }
+          &:last-child{
+            margin-bottom:10px;
+          }
+
+          a{
+            white-space: nowrap;
+            font-size: 12px;
+            border-radius: 3px;
+            padding: 10px 10px 10px 15px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.text-navy {
+  color: $navy;
+}
+
+.text-primary {
+  color: inherit;
+}
+
+.text-success {
+  color: $blue;
+}
+
+.text-info {
+  color: $lazur;
+}
+
+.text-warning {
+  color: $yellow;
+}
+
+.text-danger {
+  color: $red;
+}
+
+.text-muted {
+  color: #888888;
+}
+
+.gray-bg {
+  background-color: $gray;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.navy-bg {
+  background-color: $navy;
+  color: white;
+}
+
+.blue-bg {
+  background-color: $blue;
+  color: white;
+}
+
+.lazur-bg {
+  background-color: $lazur;
+  color: white;
+}
+
+.yellow-bg {
+  background-color: $yellow;
+  color: white;
+}
+
+.red-bg {
+  background-color: $red;
+  color: white;
+}
+
+.black-bg {
+  background-color: #262626;
+}

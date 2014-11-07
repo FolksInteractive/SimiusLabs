@@ -1,0 +1,6 @@
+{
+  "topbar" : {
+    "greeting": "Welcome in Admin panel",
+    "logout" : "Log out"
+  }
+}

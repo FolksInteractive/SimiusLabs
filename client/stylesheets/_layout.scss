@@ -1,0 +1,50 @@
+html,
+body {
+  font-family: $font-stack;
+  font-size: 13px;
+  color: $text-color;
+  height: 100%;
+  overflow: hidden;
+}
+
+#global-wrapper {
+  width: 100%;
+  height:100%;
+  background-color: #2f4050;
+
+  &.outside{
+    background-color: $gray;
+  }
+}
+
+#view-wrapper{  
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include transition(all .25s linear);
+
+  .page-content{
+    padding: 20px 15px;
+  }
+}
+
+.compressed{
+  #view-wrapper{
+    margin: 0 0 0 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  #view-wrapper {
+    position: inherit;
+    margin: 0 0 0 $sidebar-width;
+  }
+}
+
+@media (max-width: 768px) {
+  #view-wrapper {
+    position: inherit;
+    margin: 0 0 0 0px;
+  }
+}

@@ -1,0 +1,12 @@
+<template name="layoutInside">
+  <div id="global-wrapper" class="inside {{compressed}}">
+
+    {{> sidebar}}
+
+    <div id="view-wrapper" class="{{view}} container-fluid gray-bg">
+      {{> topbar}}
+      
+      {{> yield}}
+    </div>
+  </div>
+</template>

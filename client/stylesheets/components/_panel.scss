@@ -1,0 +1,55 @@
+.panel-heading h1, .panel-heading h2 {
+  margin-bottom: 5px;
+}
+
+.panel-title {
+  font-size: inherit;
+}
+.panel-primary {
+  border-color: $navy;
+}
+
+.panel-primary > .panel-heading {
+  background-color: $navy;
+  border-color: $navy;
+}
+
+.panel-success {
+  border-color: $blue;
+}
+
+.panel-success > .panel-heading {
+  background-color: $blue;
+  border-color: $blue;
+  color: white;
+}
+
+.panel-info {
+  border-color: $lazur;
+}
+
+.panel-info > .panel-heading {
+  background-color: $lazur;
+  border-color: $lazur;
+  color: white;
+}
+
+.panel-warning {
+  border-color: $yellow;
+}
+
+.panel-warning > .panel-heading {
+  background-color: $yellow;
+  border-color: $yellow;
+  color: white;
+}
+
+.panel-danger {
+  border-color: $red;
+}
+
+.panel-danger > .panel-heading {
+  background-color: $red;
+  border-color: $red;
+  color: white;
+}

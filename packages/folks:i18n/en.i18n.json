@@ -1,0 +1,22 @@
+{ 
+  "active"    : "Active",
+  "analytics" : "Analytics",
+  "dashboard" : "Dashboard",
+  "disable"   : "Disable",
+  "home"      : "Home",
+  "edit"      : "Edit",
+  "email"     : "Email",
+  "enabled"   : "Enabled",
+  "import"    : "Import",
+  "firstname" : "First name",
+  "lastname"  : "Last name",
+  "remove"    : "Remove",
+  "role"      : "Role",
+  "save"      : "Save",
+  "search"    : "Search",
+  "tour"      : "Tour",
+  "tours"     : "Tours",
+  "user"      : "User",
+  "users"     : "Users",
+  "view"      : "View"
+}
