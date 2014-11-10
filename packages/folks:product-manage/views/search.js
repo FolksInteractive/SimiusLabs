@@ -5,7 +5,7 @@ Template.productManageSearch.helpers({
 });
 
 Template.productManageSearch.events({
-  'keyup .search-input' : _.debounce(function(e){
+  'keyup .search-input' : _.throttle(function(e){
     Product.query.set(e.target.value);
   }, 300),
 });
