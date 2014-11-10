@@ -1,0 +1,44 @@
+<template name="productManageListView">
+  <div class="page-heading white-bg row">
+    <div class="col-sm-4">
+      <h2>{{_ 'product_manage.list'}}</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="index.html">{{_ 'home'}}</a>
+        </li>
+        <li class="active">
+          <strong>{{_ 'product_manage.list'}}</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="page-content row">
+    <div class="col-lg-12">
+      <div class="animated fadeIn">
+        <div class="ibox">
+
+          <div class="ibox-title">
+            <h5></h5>
+            <div class="ibox-tools">
+              <a href="{{pathFor 'productManageDetails' productId='new'}}" class="btn btn-primary btn-xs">{{_ 'product_manage.create_label' }}</a>
+            </div>
+          </div>
+
+
+          <div class="ibox-content">
+            <div class="row m-b-sm m-t-sm">
+              <div class="col-sm-12 col-md-8 col-lg-6">
+                {{> productManageSearch}}
+              </div>
+            </div>
+
+              <div class="list">
+                {{> productManageTable}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>

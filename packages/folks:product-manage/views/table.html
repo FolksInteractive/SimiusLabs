@@ -1,0 +1,13 @@
+<template name="productManageTable">
+  <table class="table table-hover">
+    <tbody>
+      {{#each products}}
+      <tr class="{{#if enabled}}enabled{{else}}disabled{{/if}}">
+        <td>
+          <a href="{{pathFor 'productManageDetails' productId=_id}}">{{name}}</a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>

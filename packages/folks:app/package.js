@@ -25,7 +25,7 @@ Package.onUse(function(api) {
   // Lib
   api.add_files([
     "app.js",
-    "router.js",
+    "router.js"
   ], ['client', 'server']);
 
   api.export("App", ['client', 'server']);

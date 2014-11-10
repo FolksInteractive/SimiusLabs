@@ -37,7 +37,7 @@ Package.onUse(function(api) {
   // Server
   api.addFiles([
     "user.server.js",
-    "role.server.js"
+    "role.server.js",
     "publications.js",
   ], ["server"]);
 

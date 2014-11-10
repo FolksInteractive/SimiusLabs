@@ -45,17 +45,17 @@ Meteor.startup(function(){
 
     'options.$.name': {
       type : String,
-      label: TAPi18n.invoke('product.option.name')
+      label: TAPi18n.invoke('product.options_name')
     },
 
     'options.$.description': {
       type : String,
-      label: TAPi18n.invoke('product..option.description')
+      label: TAPi18n.invoke('product.options_description')
     },
 
     'options.$.price': {
       type : Number,
-      label: TAPi18n.invoke('product.option.price')
+      label: TAPi18n.invoke('product.options_price')
     },
   }
 
