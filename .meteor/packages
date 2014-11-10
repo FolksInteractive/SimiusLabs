@@ -13,4 +13,8 @@ mrt:underscore-string-latest
 folks:user-accounts
 folks:i18n
 folks:app
+folks:product
+folks:product-provider
+folks:user-avatar
+shopatour:contiki
 

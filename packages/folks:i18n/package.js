@@ -10,10 +10,12 @@ Package.onUse(function(api) {
 
   api.use([
     "tap:i18n",
+    "tap:i18n-db",
   ], ["client", "server"]);
 
   api.imply([
     "tap:i18n@1.0.7",
+    "tap:i18n-db",
     "aldeed:simple-schema@1.1.0",
   ], ["client", "server"]);
 
@@ -26,5 +28,5 @@ Package.onUse(function(api) {
     "simpleschema.fr.i18n.json",
   ], ['client', 'server']);
 
-  api.export("App", ['client', 'server']);
+  api.export(["i18n"], ['client', 'server']);
 });

@@ -1,5 +1,7 @@
-TAPi18n.invoke = function(key){
+i18n = TAPi18n;
+
+i18n.invoke = function(key){
   return function(){
-    return TAPi18n.__(key)
+    return i18n.__(key)
   }
 }

@@ -17,17 +17,20 @@ _.extend(User.class.prototype, {
   },
 });
 
+User._defaults = {
+  profile : {
+    firstname : "",
+    lastname : ""
+  },
+  emails : [],
+  enabled : true
+}
+
 User.defaults = function(){
-  return {
-    createdAt : new Date(),
-    profile : {
-      firstname : "",
-      lastname : ""
-    },
-    emails : [],
-    enabled : true,
-    roles : []
-  }
+  var defaults = _.clone(User._defaults);
+  return _.extend(defaults,{
+    createdAt : new Date()
+  });
 }
 
 User.isLoggedIn = function() {

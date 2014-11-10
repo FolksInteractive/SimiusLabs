@@ -5,6 +5,10 @@
       "1.1.2"
     ],
     [
+      "alanning:roles",
+      "1.2.12"
+    ],
+    [
       "application-configuration",
       "1.0.3"
     ],

@@ -12,7 +12,7 @@ Package.onUse(function(api) {
     "folks:user",
     "cfs:standard-packages",
     "cfs:graphicsmagick",
-    // "shopatour:cfs-filesystem",
+    "cfs:filesystem",
     "underscore",
   ], ["client", "server"]);
 

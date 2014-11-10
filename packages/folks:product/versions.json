@@ -1,12 +1,8 @@
 {
   "dependencies": [
     [
-      "accounts-base",
-      "1.1.2"
-    ],
-    [
-      "alanning:roles",
-      "1.2.12"
+      "aldeed:simple-schema",
+      "1.1.0"
     ],
     [
       "application-configuration",
@@ -37,80 +33,12 @@
       "1.0.1"
     ],
     [
-      "cfs:access-point",
-      "0.0.0"
-    ],
-    [
-      "cfs:base-package",
-      "0.0.0"
-    ],
-    [
-      "cfs:collection",
-      "0.0.0"
-    ],
-    [
-      "cfs:collection-filters",
-      "0.0.0"
-    ],
-    [
-      "cfs:data-man",
-      "0.0.0"
-    ],
-    [
-      "cfs:file",
-      "0.0.0"
-    ],
-    [
-      "cfs:filesystem",
-      "0.0.0"
-    ],
-    [
-      "cfs:graphicsmagick",
-      "0.0.1"
-    ],
-    [
-      "cfs:http-methods",
-      "0.0.24"
-    ],
-    [
-      "cfs:http-publish",
-      "0.0.0"
-    ],
-    [
-      "cfs:power-queue",
-      "0.0.1"
-    ],
-    [
-      "cfs:reactive-list",
-      "0.0.0"
-    ],
-    [
-      "cfs:reactive-property",
-      "0.0.0"
-    ],
-    [
-      "cfs:standard-packages",
-      "0.0.2"
-    ],
-    [
-      "cfs:storage-adapter",
-      "0.0.0"
-    ],
-    [
-      "cfs:tempstore",
-      "0.0.2"
-    ],
-    [
-      "cfs:upload-http",
-      "0.0.2"
-    ],
-    [
-      "cfs:worker",
-      "0.0.0"
-    ],
-    [
       "check",
       "1.0.2"
+    ],
+    [
+      "coffeescript",
+      "1.0.4"
     ],
     [
       "ddp",
@@ -125,8 +53,8 @@
       "1.0.4"
     ],
     [
-      "folks:user",
-      "0.0.0"
+      "folks:i18n",
+      "1.0.0"
     ],
     [
       "follower-livedata",
@@ -143,10 +71,6 @@
     [
       "htmljs",
       "1.0.2"
-    ],
-    [
-      "http",
-      "1.0.8"
     ],
     [
       "id-map",
@@ -193,14 +117,6 @@
       "1.0.1"
     ],
     [
-      "livedata",
-      "1.0.11"
-    ],
-    [
-      "localstorage",
-      "1.0.1"
-    ],
-    [
       "logging",
       "1.0.5"
     ],
@@ -221,20 +137,12 @@
       "1.0.8"
     ],
     [
-      "mongo-livedata",
-      "1.0.6"
-    ],
-    [
       "observe-sequence",
       "1.0.3"
     ],
     [
       "ordered-dict",
       "1.0.1"
-    ],
-    [
-      "raix:eventemitter",
-      "0.0.1"
     ],
     [
       "random",
@@ -257,8 +165,8 @@
       "1.0.2"
     ],
     [
-      "service-configuration",
-      "1.0.2"
+      "session",
+      "1.0.4"
     ],
     [
       "spacebars",
@@ -267,6 +175,18 @@
     [
       "spacebars-compiler",
       "1.0.3"
+    ],
+    [
+      "tap:http-methods",
+      "0.0.23"
+    ],
+    [
+      "tap:i18n",
+      "1.0.7"
+    ],
+    [
+      "tap:i18n-db",
+      "0.3.0"
     ],
     [
       "templating",
@@ -283,10 +203,6 @@
     [
       "underscore",
       "1.0.1"
-    ],
-    [
-      "url",
-      "1.0.2"
     ],
     [
       "webapp",

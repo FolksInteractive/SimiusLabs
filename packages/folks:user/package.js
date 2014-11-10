@@ -13,12 +13,14 @@ Package.onUse(function(api) {
     "accounts-base",
     "iron:router",
     "underscore",
+    "alanning:roles",
   ], ["client", "server"]);
 
   api.imply([
     "templating",
     "iron:router",
     "underscore",
+    "alanning:roles@1.2.12",
   ], ["client", "server"]);
 
   // Client

@@ -1,7 +1,9 @@
 Avatar = User.Avatar = {
   size : 300,
   path : '/app-storage/avatars', // Compatible with Modulus
-  set : Meteor.call('avatarUpload', fileId, cb),
+  set : function(fileId, cb){
+    Meteor.call('avatarUpload', fileId, cb)
+  },
 };
 
 

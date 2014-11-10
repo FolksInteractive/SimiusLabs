@@ -1,0 +1,17 @@
+{
+  "product" : {    
+    "products"        : "Products",
+    "product"         : "Product",
+    "valid"           : "Valid",
+    "enabled"         : "Enabled",
+    "created_at"      : "Creation date",
+    "sku"             : "SKU",
+    "name"            : "Name",
+    "description"     : "Description",
+    "options"         : {
+      "name"          : "Option name",
+      "description"   : "Option description",
+      "price"         : "Option price"
+    }
+  }
+}
