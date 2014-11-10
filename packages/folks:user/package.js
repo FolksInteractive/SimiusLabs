@@ -31,12 +31,13 @@ Package.onUse(function(api) {
   // Lib
   api.addFiles([
     'user.js',
-    'roles.js',
+    'role.js',
   ], ["client", "server"]);
 
   // Server
   api.addFiles([
     "user.server.js",
+    "role.server.js"
     "publications.js",
   ], ["server"]);
 
