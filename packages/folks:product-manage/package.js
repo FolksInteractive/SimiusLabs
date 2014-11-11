@@ -45,6 +45,7 @@ Package.onUse(function(api) {
   api.addFiles([
     'manage.js',
     'product.js',
+    'router.js',
     'en.i18n.json'
   ], ["client", "server"]);
 
