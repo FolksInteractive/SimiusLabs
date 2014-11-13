@@ -31,7 +31,42 @@
         <div class="ibox">
 
           <div class="ibox-content">
-            {{>quickForm schema=formSchema id="userDetailsForm" template='folks' doc=doc}}
+            {{#autoForm schema=formSchema id="userDetailsForm" class="form-horizontal" doc=doc}}
+
+              <div class="avatar-group form-group">
+                <div class="col-img col-xs-12 col-sm-2">
+                  <img src="{{avatar}}" class="img-circle">
+                </div>
+                {{#if userIsTarget}}
+                  <div class="col-input col-xs-12 col-sm-10">
+                    <input type="file" name="avatar">
+                  </div>
+                {{/if}}
+              </div>
+
+              <!-- Firstname -->
+              {{>afFormGroup name="firstname" template='folks' 
+                value=profile.firstname}}
+
+              <!-- Lastname -->
+              {{>afFormGroup name="lastname" template='folks' 
+                value=profile.lastname}}
+
+              <!-- Email -->
+              {{>afFormGroup name="email" template='folks' 
+                value=email}}
+
+              <!-- Role -->
+              {{>afFormGroup name="role" template='folks' 
+                value=role type="select" options=roles disabled=roleType  }}
+
+              <div class="submit-group form-group has-feedback">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary">{{_ "Save"}}</button>
+                </div>
+              </div>
+
+            {{/autoForm}}
           </div>
 
         </div>

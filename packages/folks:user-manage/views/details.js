@@ -67,17 +67,6 @@ Template.userManageDetailsView.helpers({
     return this.emails[0].address;
   },
 
-  showEnableField : function(){
-    // Don't show if new user because he will be automatically enabled
-    if(User.noSelection())
-      return false;
-    // Don't show if target user is himself
-    if(User.selectedId() == User.currentId())
-      return false;
-
-    return true;
-  },
-
   roles : function(){
     var user = this;
     return _.map(User.availableRoles, function(role){
@@ -93,12 +82,12 @@ Template.userManageDetailsView.events({
   'change input[name=avatar]': function(event, template) {
     var domFile = event.target.files[0];    
     var params = new FS.File(domFile);
-    Avatars.insert(domFile, function(err, fsFile) {
+    User.Avatars.insert(domFile, function(err, fsFile) {
       if(err)
         return console.log(err);
 
       // Call method to associate uploaded file as current user avatar
-      Meteor.call('userAvatar', fsFile._id);
+      User.Avatar.set(fsFile._id);
     });
   }
 });

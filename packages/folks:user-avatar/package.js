@@ -25,7 +25,7 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'avatar.js',
+    'model.js',
     'methods.js',
-    'model.js'
   ], ["client", "server"]);
 });

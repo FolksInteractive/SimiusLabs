@@ -10,14 +10,18 @@ Template['quickForm_folks'].helpers({
   inputClass: function () {
     var atts = findAtts();
     if (atts) {
-      return atts["input-col-class"];
+      return atts["input-col-class"] || "col-sm-10";
     }
+
+    return "col-sm-10";
   },
   labelClass: function () {
     var atts = findAtts();
     if (atts) {
-      return atts["label-class"];
+      return atts["label-class"] || "col-sm-2";
     }
+
+    return "col-sm-2";
   },
   submitButtonAtts: function () {
     var qfAtts = this.atts;
