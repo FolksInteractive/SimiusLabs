@@ -30,6 +30,7 @@ AccountsTemplates.configure({
     texts : {
       title: {
         signIn : "welcome",
+        signUp : "Create your Account"
       }
     }
   });
@@ -53,6 +54,29 @@ AccountsTemplates.configureRoute('verifyEmail', {
   layoutTemplate : 'layoutOutside'
 });
 
-Meteor.startup(function(){
-  AccountsTemplates.init();
-});
+// Configuring fields
+AccountsTemplates.removeField('email');
+AccountsTemplates.addFields([
+  {
+      _id: 'firstname',
+      type: 'text',
+      placeholder: "First name",
+      displayName: "First name",
+      required : true,
+  },
+  {
+      _id: 'lastname',
+      type: 'text',
+      placeholder: "Last name",
+      displayName: "Last name",
+      required : true,
+  },
+  {
+      _id: 'email',
+      type: 'email',
+      required: true,
+      displayName: "email",
+      re: /.+@(.+){2,}\.(.+){2,}/,
+      errStr: 'Invalid email address',
+  }
+]);

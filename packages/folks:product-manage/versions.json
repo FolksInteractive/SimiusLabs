@@ -2,7 +2,7 @@
   "dependencies": [
     [
       "aldeed:autoform",
-      "4.0.1"
+      "4.0.2"
     ],
     [
       "aldeed:simple-schema",
@@ -55,6 +55,10 @@
     [
       "ejson",
       "1.0.4"
+    ],
+    [
+      "folks:autoform",
+      "0.0.0"
     ],
     [
       "folks:i18n",

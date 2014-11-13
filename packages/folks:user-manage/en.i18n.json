@@ -1,0 +1,19 @@
+{
+  "user_manage":{
+    "account_info_title" : "Account Informations",
+    "account_info_details" : "All information relevant to the account.",
+    "change_password" : "Change password",
+    "confirm_password" : "Confirm new password",
+    "confirm_remove" : "Are you sure you want to remove __name__? This action can't be undone.",
+    "current_password" : "Current password",
+    "create_label" : "Create new user",
+    "list" : "Users list",
+    "new_password" : "New password",
+    "password_mismatch" : "Password Mismatch",
+    "perso_info_title" : "Personnal Informations",
+    "perso_info_details" : "All information relevant to your profile.",
+    "users" : "Users",
+    "user" : "User",
+    "new_user" : "New User"
+  }
+}

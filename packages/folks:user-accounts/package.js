@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use([
     "folks:email",
     "folks:user",
-    "useraccounts:core",
+    "useraccounts:core@1.2.2",
     "underscore",
     "templating",
     "fourseven:scss@0.9.5"

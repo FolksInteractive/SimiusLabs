@@ -1,13 +1,16 @@
 <template name="productManageDetailsView">
   <div class="page-heading white-bg row">
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <h2>{{name}}</h2>
       <ol class="breadcrumb">
         <li>
-          <a href="index.html">{{_ 'Home'}}</a>
+          <a href="{{pathFor 'root'}}">{{_ 'Home'}}</a>
+        </li>
+        <li>
+          <a href="{{pathFor 'productManageList'}}">{{_ 'product_manage.list'}}</a>
         </li>
         <li class="active">
-          <strong>{{_ 'product_manage.list'}}</strong>
+          <strong>{{_ 'product_manage.product'}}</strong>
         </li>
       </ol>
     </div>
@@ -23,7 +26,7 @@
         <div class="ibox">
 
           <div class="ibox-content">
-            {{> quickForm schema=formSchema template="bootstrap3-horizontal" id="productDetailsForm" class="form-horizontal" label-class="col-sm-2" input-col-class="col-sm-10" doc=this}}
+            {{> quickForm schema=formSchema id="productDetailsForm" template="folks" doc=this}}
 
           </div>
 

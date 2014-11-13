@@ -1,5 +1,6 @@
 {
   "product_manage" : {
+    "product"       : "Product",
     "list"          : "Products List",
     "create_label"  : "Create new product",
     "details_title" : "Product information"

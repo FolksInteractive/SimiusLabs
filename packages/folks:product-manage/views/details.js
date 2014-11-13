@@ -17,7 +17,7 @@ AutoForm.hooks({
       var form = this;
       var product = Router.current().data() || {};
       var handle = (product._id) ? handleUpdate : handleCreation;
-
+      console.log(product)
       handle(product, params, function(err){
         if(err)
           return console.log(err);

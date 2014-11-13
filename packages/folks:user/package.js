@@ -12,6 +12,7 @@ Package.onUse(function(api) {
     "templating",
     "accounts-base",
     "iron:router",
+    "aldeed:simple-schema",
     "underscore",
     "alanning:roles",
   ], ["client", "server"]);
@@ -19,6 +20,7 @@ Package.onUse(function(api) {
   api.imply([
     "templating",
     "iron:router",
+    "aldeed:simple-schema",
     "underscore",
     "alanning:roles@1.2.12",
   ], ["client", "server"]);
@@ -32,6 +34,9 @@ Package.onUse(function(api) {
   api.addFiles([
     'user.js',
     'role.js',
+    'methods.js',
+    'schemas.js',
+    'permissions.js'
   ], ["client", "server"]);
 
   // Server

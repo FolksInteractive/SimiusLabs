@@ -1,0 +1,76 @@
+<template name="userManageDetailsView">
+  <div class="page-heading white-bg row">
+    <div class="col-sm-6">
+      {{#if isNew}}
+        <h2>{{_ 'user_manage.new_user'}}</h2>
+      {{else}}
+        <h2>{{fullname}}</h2>
+      {{/if}}
+      <ol class="breadcrumb">
+        <li>
+          <a href="{{pathFor 'root'}}">{{_ 'Home'}}</a>
+        </li>
+        <li>
+          <a href="{{pathFor 'userManageList'}}">{{_ 'user_manage.list'}}</a>
+        </li>
+        <li class="active">
+          <strong>{{_ 'user_manage.user'}}</strong>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="page-content row">
+    <div class="col-sm-12 col-md-3">
+      <h3>{{_ "user_manage.perso_info_title"}}</h3>
+      <p>{{_ "user_manage.perso_info_details"}}</p>
+    </div>
+
+    <div class="col-sm-12 col-md-9">
+      <div class="animated fadeInUp">
+        <div class="ibox">
+
+          <div class="ibox-content">
+            {{>quickForm schema=formSchema id="userDetailsForm" template='folks' doc=doc}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {{#if userIsTarget}}
+    <!-- Account Info -->
+    <div class="col-sm-12 col-md-3">
+      <h3>{{_ "user_manage.account_info_title"}}</h3>
+      <p>{{_ "user_manage.account_info_details"}}</p>
+    </div>
+
+    <div class="col-sm-12 col-md-9">
+      <div class="animated fadeInUp">
+        <div class="ibox">
+
+          <div class="ibox-content">
+            {{#autoForm id="changePwdForm" class="form-horizontal" schema=changePwdSchema}}
+              {{> afFormGroup name='current' template='folks'
+                  type='password'}}
+
+              {{> afFormGroup name='new' template='folks'
+                  type='password'}}
+
+              {{> afFormGroup name='confirmed' template='folks'
+                  type='password'}}
+
+              <div class="submit-group form-group has-feedback">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary">{{_ "user_manage.change_password"}}</button>
+                </div>
+              </div>
+            {{/autoForm}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</template>

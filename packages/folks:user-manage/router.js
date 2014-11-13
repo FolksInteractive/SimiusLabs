@@ -4,34 +4,34 @@ Manage.router = {};
 var subsManager = new SubsManager();
 
 Manage.router.listController = RouteController.extend({
-  template : 'productManageListView',
+  template : 'userManageListView',
   waitOn : function(){
     return [
-      subsManager.subscribe('products')
+      subsManager.subscribe('users')
     ]
   },
   onStop : function(){
-    Product.query.set(null);
+    User.query.set(null);
   }
 });
 
 Manage.router.detailsController = RouteController.extend({
-  template : 'productManageDetailsView',
+  template : 'userManageDetailsView',
   waitOn: function(){
     return [
-      subsManager.subscribe('product', this.params.productId)
+      subsManager.subscribe('user', this.params.userId)
     ]
   },
   data : function(){
-    var selected = this.params.productId;
+    var selected = this.params.userId;
 
-    if(this.params.productId == 'new') 
+    if(this.params.userId == 'new') 
       selected = null;
     
-    Product.select(selected);
-    return Product.selected();
+    User.select(selected);
+    return User.selected();
   },
   onStop : function(){
-    Product.unSelect();
+    User.unSelect();
   }
 });

@@ -7,7 +7,12 @@ User.class = function(doc){
   _.extend(this, doc);
 }
 _.extend(User.class.prototype, {
-
+  firstname : function(){
+    return this.profile.firstname
+  },
+  lastname : function(){
+    return this.profile.lastname
+  },
   email : function(){
     return this.emails[0].address
   },
@@ -60,4 +65,20 @@ User.equals = function(user){
 
   // Comparing with the user ID (String) passed
   return User.currentId() == user;
+}
+
+User.create = function(params, cb){
+  return Meteor.call('userCreate', params, cb);
+}
+
+User.update = function(targetId, params, cb){
+  return Meteor.call('userUpdate', targetId, params, cb);
+}
+
+User.remove = function(params, cb){
+  return Meteor.call('userRemove', params, cb);
+}
+
+User.disable = function(params, cb){
+  return Meteor.call('userDisable', params, cb);
 }

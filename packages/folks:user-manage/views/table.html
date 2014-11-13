@@ -1,0 +1,49 @@
+<template name="userManageTable">
+  <table class="table table-hover">
+    <tbody>
+      {{#each users}}
+      <tr class="{{#if enabled}}enabled{{else}}disabled{{/if}}">
+        <td class="col-xs-1">
+          {{#with badge}}
+            <span class="label label-{{color}}">{{label}}</span>
+          {{/with}}
+          {{#unless enabled}}
+            <span class="label label-plain">{{label}}</span>
+          {{/unless}}
+        </td>
+        <td>
+          <a href="{{pathFor 'userManageDetails' userId=_id}}">
+            <div class="media">
+              <div class="media-object pull-left">
+                <img class="avatar img-circle" src="{{avatar}}" />
+              </div>
+              <div class="media-body">
+                {{fullname this}}
+                <br>
+                <small class="text-muted">{{email}}</small>
+              </div>
+            </div>                          
+          </a>
+
+        </td>
+        <td class="col-xs-2 text-right">
+          <a href="{{pathFor 'userManageDetails' userId=_id}}" class="btn btn-white btn-sm">
+            <i class="fa fa-pencil"></i> {{_ "edit"}}
+          </a>
+          {{#unless himself}}
+          {{#if enabled}}
+          <a href="#" class="disable-btn btn btn-white btn-sm">
+            <i class="fa fa-ban"></i> {{_ "disable"}}
+          </a>
+          {{else}}
+          <a href="#" class="remove-btn btn btn-white btn-sm">
+            <i class="fa fa-trash"></i> {{_ "remove"}}
+          </a>
+          {{/if}}
+          {{/unless}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>

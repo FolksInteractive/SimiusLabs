@@ -1,0 +1,43 @@
+@import ".meteor/local/build/programs/server/assets/packages/reywood_bootstrap3-sass/bootstrap";
+@import "client/stylesheets/_variables";
+
+.user-manage-details{
+  .avatar-group {
+    input{
+      margin-top: 20px;
+    }
+  }
+
+  .role-group{
+    .form-control{
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .avatar-group{    
+    .col-img{
+      text-align: right;
+
+      img{
+        @include square(70px);
+        border:4px solid $gray;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 768px){
+  .avatar-group{    
+    .col-img{
+      text-align: center;
+
+      img{
+        @include square(140px);
+        border:4px solid $gray;
+      }
+    }
+  }
+}

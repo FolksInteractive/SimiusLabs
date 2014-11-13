@@ -1,30 +1,30 @@
 Package.describe({
-  summary: "Product management package",
+  name: 'folks:user-manage',
+  summary: "User management package",
   version: "0.0.0",
+  git: 'https://github.com/FolksInteractive/SimiusLabs.git'
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
 
   api.use([
-    "folks:product",
-    "folks:autoform",
+    "folks:user",
     "iron:router",
-    "meteorhacks:subs-manager",
     "aldeed:autoform",
+    "meteorhacks:subs-manager",
     "tap:i18n",
     "underscore",
     "templating",
     "reactive-var",
     "reywood:bootstrap3-sass",
-  ], ["client", "server"]);
+  ], ["client", "server"], {weak : false});
 
   api.imply([
-    "folks:product",
-    "folks:autoform",
+    "folks:user",
     "iron:router",
+    "aldeed:autoform",
     "meteorhacks:subs-manager",
-    "aldeed:autoform@4.0.2",
     "tap:i18n",
     "underscore",
     "templating",
@@ -46,9 +46,9 @@ Package.onUse(function(api) {
   // Lib
   api.addFiles([
     'manage.js',
-    'product.js',
+    'user.js',
     'router.js',
-    'en.i18n.json'
+    'en.i18n.json',
   ], ["client", "server"]);
 
   // Server
