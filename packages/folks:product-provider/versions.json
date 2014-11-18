@@ -1,6 +1,14 @@
 {
   "dependencies": [
     [
+      "accounts-base",
+      "1.1.2"
+    ],
+    [
+      "alanning:roles",
+      "1.2.12"
+    ],
+    [
       "aldeed:simple-schema",
       "1.1.0"
     ],
@@ -65,6 +73,10 @@
       "0.0.0"
     ],
     [
+      "folks:user",
+      "0.0.0"
+    ],
+    [
       "follower-livedata",
       "1.0.2"
     ],
@@ -125,6 +137,10 @@
       "1.0.1"
     ],
     [
+      "localstorage",
+      "1.0.1"
+    ],
+    [
       "logging",
       "1.0.5"
     ],
@@ -170,6 +186,10 @@
     ],
     [
       "routepolicy",
+      "1.0.2"
+    ],
+    [
+      "service-configuration",
       "1.0.2"
     ],
     [

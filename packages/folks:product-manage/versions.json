@@ -1,6 +1,14 @@
 {
   "dependencies": [
     [
+      "accounts-base",
+      "1.1.2"
+    ],
+    [
+      "alanning:roles",
+      "1.2.12"
+    ],
+    [
       "aldeed:autoform",
       "4.0.2"
     ],
@@ -66,6 +74,10 @@
     ],
     [
       "folks:product",
+      "0.0.0"
+    ],
+    [
+      "folks:user",
       "0.0.0"
     ],
     [
@@ -137,6 +149,10 @@
       "1.0.11"
     ],
     [
+      "localstorage",
+      "1.0.1"
+    ],
+    [
       "logging",
       "1.0.5"
     ],
@@ -194,6 +210,10 @@
     ],
     [
       "routepolicy",
+      "1.0.2"
+    ],
+    [
+      "service-configuration",
       "1.0.2"
     ],
     [

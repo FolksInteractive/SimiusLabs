@@ -10,6 +10,7 @@ Package.onUse(function(api) {
   
   api.use([
     "folks:user",
+    "folks:cfs",
     "cfs:standard-packages",
     "cfs:graphicsmagick",
     "cfs:filesystem",

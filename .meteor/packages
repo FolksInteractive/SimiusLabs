@@ -16,8 +16,8 @@ folks:app
 folks:product
 folks:product-provider
 folks:user-avatar
-shopatour:contiki
 folks:product-manage
 folks:user-manage
 folks:autoform
-
+folks:cfs
+folks:project

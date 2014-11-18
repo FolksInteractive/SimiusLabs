@@ -1,6 +1,5 @@
 Avatar = User.Avatar = {
   size : 300,
-  path : (Meteor.isServer) ? process.env.CLOUD_DIR || null : null,
   set : function(fileId, cb){
     Meteor.call('userAvatar', fileId, cb)
   },
@@ -21,9 +20,10 @@ _.extend(User.class.prototype, {
 Avatars = User.Avatars = new FS.Collection("avatars", {
   'stores' : [
     new FS.Store.FileSystem("avatars", {
-      path : Avatar.path,
+      // Modulus provide CLOUD_DIR path in the process env
+      path : (Meteor.isServer) ? process.env.CLOUD_DIR || null : null,
       beforeWrite: function(file) {
-        // Changingfilename extension and type
+        // Changing filename extension and type
         return {
           extension: 'png',
           type: 'image/png'

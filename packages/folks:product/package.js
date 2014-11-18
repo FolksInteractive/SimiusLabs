@@ -9,6 +9,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0');
 
   api.use([
+    "folks:user",
     "folks:i18n",
     "iron:router",
     "aldeed:simple-schema",
@@ -17,7 +18,8 @@ Package.onUse(function(api) {
 
   api.imply([
     "folks:i18n",
-    "aldeed:simple-schema@1.1.0"
+    "aldeed:simple-schema@1.1.0",
+    "underscore",
   ], ["client", "server"]);
 
   // Client
